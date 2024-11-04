@@ -1742,6 +1742,7 @@ CONFIG_PACKAGE_u-boot-orangepi-r1-plus-lts-rk3328=y
 #
 # Extra packages
 #
+# CONFIG_PACKAGE_cpufreq is not set
 # CONFIG_PACKAGE_jose is not set
 # CONFIG_PACKAGE_libjose is not set
 # CONFIG_PACKAGE_nginx is not set
@@ -2953,7 +2954,7 @@ CONFIG_GOLANG_BUILD_CACHE_DIR=""
 CONFIG_PACKAGE_lua=y
 # CONFIG_PACKAGE_lua-argparse is not set
 # CONFIG_PACKAGE_lua-bencode is not set
-# CONFIG_PACKAGE_lua-bit32 is not set
+CONFIG_PACKAGE_lua-bit32=y
 # CONFIG_PACKAGE_lua-cjson is not set
 # CONFIG_PACKAGE_lua-copas is not set
 # CONFIG_PACKAGE_lua-coxpcall is not set
@@ -3004,7 +3005,7 @@ CONFIG_LUA_ECO_MBEDTLS=y
 # CONFIG_PACKAGE_luajit is not set
 # CONFIG_PACKAGE_lualanes is not set
 # CONFIG_PACKAGE_luaossl is not set
-# CONFIG_PACKAGE_luaposix is not set
+CONFIG_PACKAGE_luaposix=y
 # CONFIG_PACKAGE_luarocks is not set
 # CONFIG_PACKAGE_luasec is not set
 # CONFIG_PACKAGE_luasoap is not set
@@ -4624,7 +4625,7 @@ CONFIG_PACKAGE_libubox=y
 CONFIG_PACKAGE_libubus=y
 CONFIG_PACKAGE_libubus-lua=y
 CONFIG_PACKAGE_libuci=y
-# CONFIG_PACKAGE_libuci-lua is not set
+CONFIG_PACKAGE_libuci-lua=y
 # CONFIG_PACKAGE_libuci2 is not set
 CONFIG_PACKAGE_libuclient=y
 CONFIG_PACKAGE_libucode=y
@@ -4815,6 +4816,7 @@ CONFIG_PACKAGE_luci-app-adblock-fast=y
 # CONFIG_PACKAGE_luci-app-clamav is not set
 # CONFIG_PACKAGE_luci-app-cloudflared is not set
 # CONFIG_PACKAGE_luci-app-commands is not set
+CONFIG_PACKAGE_luci-app-cpufreq=y
 # CONFIG_PACKAGE_luci-app-crowdsec-firewall-bouncer is not set
 # CONFIG_PACKAGE_luci-app-cshark is not set
 # CONFIG_PACKAGE_luci-app-dawn is not set
@@ -4830,6 +4832,7 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linears=y
 # CONFIG_PACKAGE_luci-app-dnscrypt-proxy is not set
 # CONFIG_PACKAGE_luci-app-dnsmasq-ipset is not set
+CONFIG_PACKAGE_luci-app-dnsproxy=y
 # CONFIG_PACKAGE_luci-app-dockerman is not set
 # CONFIG_PACKAGE_luci-app-dump1090 is not set
 # CONFIG_PACKAGE_luci-app-dynapoint is not set
@@ -4843,6 +4846,7 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linears=y
 # CONFIG_PACKAGE_luci-app-hnet is not set
 # CONFIG_PACKAGE_luci-app-hotspot is not set
 # CONFIG_PACKAGE_luci-app-https-dns-proxy is not set
+CONFIG_PACKAGE_luci-app-internet-detector=y
 # CONFIG_PACKAGE_luci-app-iperf is not set
 # CONFIG_PACKAGE_luci-app-ksmbd is not set
 # CONFIG_PACKAGE_luci-app-ledtrig-rssi is not set
@@ -4876,6 +4880,7 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linears=y
 # CONFIG_PACKAGE_luci-app-qos is not set
 # CONFIG_PACKAGE_luci-app-radicale is not set
 # CONFIG_PACKAGE_luci-app-radicale2 is not set
+CONFIG_PACKAGE_luci-app-ramfree=y
 # CONFIG_PACKAGE_luci-app-rootervpn is not set
 # CONFIG_PACKAGE_luci-app-rp-pppoe-server is not set
 # CONFIG_PACKAGE_luci-app-samba4 is not set
@@ -5033,9 +5038,12 @@ CONFIG_PACKAGE_luci-lib-nixio=y
 # CONFIG_PACKAGE_luci-i18n-base-vi is not set
 # CONFIG_PACKAGE_luci-i18n-base-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-base-zh-tw is not set
+# CONFIG_PACKAGE_luci-i18n-cpufreq-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-diskman-pl is not set
 # CONFIG_PACKAGE_luci-i18n-diskman-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-diskman-zh-tw is not set
+# CONFIG_PACKAGE_luci-i18n-internet-detector-ru is not set
+# CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn is not set
 # end of LuCI
 
 #
@@ -5308,7 +5316,7 @@ CONFIG_PACKAGE_nftables-json=y
 # CONFIG_PACKAGE_dnsdist is not set
 # CONFIG_PACKAGE_dnsdist-full is not set
 # CONFIG_PACKAGE_dnslookup is not set
-# CONFIG_PACKAGE_dnsproxy is not set
+CONFIG_PACKAGE_dnsproxy=y
 # CONFIG_PACKAGE_drill is not set
 # CONFIG_PACKAGE_hostip is not set
 # CONFIG_PACKAGE_idn is not set
@@ -5965,6 +5973,7 @@ CONFIG_PACKAGE_ifstat=y
 CONFIG_IFSTAT_SNMP=y
 CONFIG_PACKAGE_iftop=y
 # CONFIG_PACKAGE_iiod is not set
+CONFIG_PACKAGE_internet-detector=y
 # CONFIG_PACKAGE_iperf is not set
 # CONFIG_PACKAGE_iperf3 is not set
 # CONFIG_PACKAGE_iperf3-ssl is not set
@@ -7104,5 +7113,3 @@ CONFIG_PACKAGE_ucode-mod-lua=y
 # CONFIG_PACKAGE_fontconfig is not set
 # end of Font-Utils
 # end of Xorg
-
-CONFIG_OVERRIDE_PKGS="luci-app-openwisp luci-proto-mbim qfirehose"
