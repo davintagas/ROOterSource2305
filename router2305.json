@@ -1,4 +1,21 @@
 {
+	"R1+LTS": {
+		"details": "OrangePI R1 PLUS LTS",
+		"type": "1",
+		"build": "2305",
+		"config": ".config_r1+lts",
+		"image": "openwrt-rockchip-armv8-xunlong_orangepi-r1-plus-lts-ext4-sysupgrade.img.gz",
+		"imagepath": "/rockchip/armv8/",
+		"mod": "OrangePI-R1-PLUS-LTS",
+		"ext": "-upgrade.img.gz",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"name": {
+				"model": "OrangePI R1 PLUS LTS"
+			},
+			"files": "/r1+/files/"
+		}
+	},
 	"BPIR3": {
 		"details": "BananaPi BPi R3",
 		"type": "4",
