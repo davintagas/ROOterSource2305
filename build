@@ -675,7 +675,7 @@ buldimage() {
 			fi
 			make defconfig
 			configfix
-			make $core V=s
+			make $core || make -j1 || make -j1 V=s
 			cp ./bin/targets$model_imagepath$model_image1 ./images/$model_image1
 			EX=$?
 			if [ $EX -ne 0 ]; then
