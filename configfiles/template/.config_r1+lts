@@ -140,7 +140,7 @@ CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
 # Image Options
 #
 CONFIG_TARGET_KERNEL_PARTSIZE=32
-CONFIG_TARGET_ROOTFS_PARTSIZE=1024
+CONFIG_TARGET_ROOTFS_PARTSIZE=1000
 # CONFIG_TARGET_ROOTFS_PERSIST_VAR is not set
 # end of Target Images
 
@@ -1559,7 +1559,7 @@ CONFIG_PACKAGE_fstools=y
 CONFIG_PACKAGE_fwtool=y
 CONFIG_PACKAGE_getrandom=y
 CONFIG_PACKAGE_jsonfilter=y
-# CONFIG_PACKAGE_libatomic is not set
+CONFIG_PACKAGE_libatomic=y
 CONFIG_PACKAGE_libc=y
 CONFIG_PACKAGE_libgcc=y
 # CONFIG_PACKAGE_libgomp is not set
@@ -3377,7 +3377,7 @@ CONFIG_ZSTD_OPTIMIZE_O3=y
 #
 # Filesystem
 #
-# CONFIG_PACKAGE_libacl is not set
+CONFIG_PACKAGE_libacl=y
 CONFIG_PACKAGE_libattr=y
 CONFIG_PACKAGE_libfuse=y
 # CONFIG_PACKAGE_libfuse3 is not set
@@ -4130,7 +4130,7 @@ CONFIG_PACKAGE_libblobmsg-json=y
 # CONFIG_PACKAGE_libcares is not set
 # CONFIG_PACKAGE_libcbor is not set
 # CONFIG_PACKAGE_libcgroup is not set
-# CONFIG_PACKAGE_libcharset is not set
+CONFIG_PACKAGE_libcharset=y
 # CONFIG_PACKAGE_libcli is not set
 # CONFIG_PACKAGE_libcoap is not set
 CONFIG_PACKAGE_libcomerr=y
@@ -4254,7 +4254,7 @@ CONFIG_PACKAGE_libgpg-error=y
 # CONFIG_PACKAGE_libhwloc is not set
 # CONFIG_PACKAGE_libi2c is not set
 # CONFIG_PACKAGE_libical is not set
-# CONFIG_PACKAGE_libiconv-full is not set
+CONFIG_PACKAGE_libiconv-full=y
 # CONFIG_PACKAGE_libid3tag is not set
 # CONFIG_PACKAGE_libidn is not set
 # CONFIG_PACKAGE_libidn2 is not set
@@ -4264,7 +4264,7 @@ CONFIG_PACKAGE_libinih=y
 # CONFIG_PACKAGE_libinotifytools is not set
 # CONFIG_PACKAGE_libinput is not set
 # CONFIG_PACKAGE_libintl-full is not set
-# CONFIG_PACKAGE_libiperf3 is not set
+CONFIG_PACKAGE_libiperf3=y
 # CONFIG_PACKAGE_libiw is not set
 # CONFIG_PACKAGE_libiwinfo is not set
 # CONFIG_PACKAGE_libjaylink is not set
@@ -4365,12 +4365,21 @@ CONFIG_PACKAGE_libnl-tiny=y
 # CONFIG_PACKAGE_libpam is not set
 CONFIG_PACKAGE_libparted=y
 # CONFIG_PACKAGE_libpbc is not set
-# CONFIG_PACKAGE_libpcap is not set
+CONFIG_PACKAGE_libpcap=y
+
+#
+# Configuration
+#
+# CONFIG_PCAP_HAS_USB is not set
+# CONFIG_PCAP_HAS_NETFILTER is not set
+# end of Configuration
+
 # CONFIG_PACKAGE_libpci is not set
 # CONFIG_PACKAGE_libpciaccess is not set
 # CONFIG_PACKAGE_libpcre is not set
 # CONFIG_PACKAGE_libpcre16 is not set
-# CONFIG_PACKAGE_libpcre2 is not set
+CONFIG_PACKAGE_libpcre2=y
+# CONFIG_PCRE2_JIT_ENABLED is not set
 # CONFIG_PACKAGE_libpcre2-16 is not set
 # CONFIG_PACKAGE_libpcre2-32 is not set
 # CONFIG_PACKAGE_libpcre32 is not set
@@ -4434,7 +4443,7 @@ CONFIG_PACKAGE_libss=y
 # CONFIG_PACKAGE_libtheora is not set
 # CONFIG_PACKAGE_libtiff is not set
 # CONFIG_PACKAGE_libtins is not set
-# CONFIG_PACKAGE_libtirpc is not set
+CONFIG_PACKAGE_libtirpc=y
 # CONFIG_PACKAGE_libtorrent-rasterbar is not set
 # CONFIG_PACKAGE_libtraceevent is not set
 # CONFIG_PACKAGE_libtraceevent-extra is not set
@@ -4625,6 +4634,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 # CONFIG_PACKAGE_luci-app-ahcp is not set
 # CONFIG_PACKAGE_luci-app-apinger is not set
 # CONFIG_PACKAGE_luci-app-aria2 is not set
+CONFIG_PACKAGE_luci-app-atinout=y
 # CONFIG_PACKAGE_luci-app-attendedsysupgrade is not set
 # CONFIG_PACKAGE_luci-app-babeld is not set
 # CONFIG_PACKAGE_luci-app-banip is not set
@@ -4667,6 +4677,7 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linears=y
 # CONFIG_PACKAGE_luci-app-https-dns-proxy is not set
 CONFIG_PACKAGE_luci-app-internet-detector=y
 # CONFIG_PACKAGE_luci-app-iperf is not set
+# CONFIG_PACKAGE_luci-app-keepalived is not set
 # CONFIG_PACKAGE_luci-app-ksmbd is not set
 # CONFIG_PACKAGE_luci-app-ledtrig-rssi is not set
 # CONFIG_PACKAGE_luci-app-ledtrig-switch is not set
@@ -4791,6 +4802,8 @@ CONFIG_PACKAGE_luci-lib-nixio=y
 # end of 6. Libraries
 
 # CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn is not set
+# CONFIG_PACKAGE_luci-i18n-atinout-ru is not set
+# CONFIG_PACKAGE_luci-i18n-atinout-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-base-ar is not set
 # CONFIG_PACKAGE_luci-i18n-base-bg is not set
 # CONFIG_PACKAGE_luci-i18n-base-bn is not set
@@ -4973,7 +4986,7 @@ CONFIG_PACKAGE_curl=y
 # CONFIG_PACKAGE_vsftpd is not set
 # CONFIG_PACKAGE_vsftpd-tls is not set
 # CONFIG_PACKAGE_wget-nossl is not set
-# CONFIG_PACKAGE_wget-ssl is not set
+CONFIG_PACKAGE_wget-ssl=y
 # end of File Transfer
 
 #
@@ -5433,6 +5446,7 @@ CONFIG_PACKAGE_openssh-sftp-server=y
 # Telephony
 #
 # CONFIG_PACKAGE_asterisk is not set
+CONFIG_PACKAGE_atinout=y
 # CONFIG_PACKAGE_baresip is not set
 # CONFIG_PACKAGE_coturn is not set
 # CONFIG_PACKAGE_freeswitch is not set
@@ -5725,15 +5739,16 @@ CONFIG_PACKAGE_adguardhome=y
 # CONFIG_PACKAGE_dnstop is not set
 # CONFIG_PACKAGE_ds-lite is not set
 # CONFIG_PACKAGE_esniper is not set
-# CONFIG_PACKAGE_etherwake is not set
+CONFIG_PACKAGE_etherwake=y
 # CONFIG_PACKAGE_etherwake-nfqueue is not set
-# CONFIG_PACKAGE_ethtool is not set
+CONFIG_PACKAGE_ethtool=y
 # CONFIG_PACKAGE_ethtool-full is not set
 # CONFIG_PACKAGE_external-protocol is not set
 # CONFIG_PACKAGE_fail2ban is not set
 # CONFIG_PACKAGE_fakeidentd is not set
 # CONFIG_PACKAGE_fakepop is not set
 # CONFIG_PACKAGE_family-dns is not set
+# CONFIG_PACKAGE_flent is not set
 # CONFIG_PACKAGE_foolsm is not set
 # CONFIG_PACKAGE_fping is not set
 # CONFIG_PACKAGE_generate-ipv6-address is not set
@@ -5761,12 +5776,12 @@ CONFIG_PACKAGE_adguardhome=y
 # CONFIG_PACKAGE_ibrdtn-tools is not set
 # CONFIG_PACKAGE_ibrdtnd is not set
 # CONFIG_PACKAGE_ifstat is not set
-# CONFIG_PACKAGE_iftop is not set
+CONFIG_PACKAGE_iftop=y
 # CONFIG_PACKAGE_iiod is not set
 CONFIG_PACKAGE_internet-detector=y
 # CONFIG_PACKAGE_internet-detector-mod-modem-restart is not set
 # CONFIG_PACKAGE_iperf is not set
-# CONFIG_PACKAGE_iperf3 is not set
+CONFIG_PACKAGE_iperf3=y
 # CONFIG_PACKAGE_iperf3-ssl is not set
 # CONFIG_PACKAGE_ipip is not set
 # CONFIG_PACKAGE_ipset is not set
@@ -5783,6 +5798,7 @@ CONFIG_PACKAGE_internet-detector=y
 # CONFIG_PACKAGE_iw-full is not set
 # CONFIG_PACKAGE_jool-tools-netfilter is not set
 # CONFIG_PACKAGE_keepalived is not set
+# CONFIG_PACKAGE_keepalived-sync is not set
 # CONFIG_PACKAGE_knxd is not set
 # CONFIG_PACKAGE_kplex is not set
 # CONFIG_PACKAGE_krb5-client is not set
@@ -5966,6 +5982,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_vxlan is not set
 # CONFIG_PACKAGE_wakeonlan is not set
 # CONFIG_PACKAGE_wg-installer-client is not set
+# CONFIG_PACKAGE_wg-installer-server is not set
 # CONFIG_PACKAGE_wifi-presence is not set
 # CONFIG_PACKAGE_wpan-tools is not set
 # CONFIG_PACKAGE_wwan is not set
@@ -6063,6 +6080,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_ext-netselect is not set
 # CONFIG_PACKAGE_ext-openwisp is not set
 # CONFIG_PACKAGE_ext-rspeedtest is not set
+# CONFIG_PACKAGE_ext-selectisp is not set
 # CONFIG_PACKAGE_ext-simpin is not set
 # CONFIG_PACKAGE_ext-simplegps is not set
 # CONFIG_PACKAGE_ext-speedtest is not set
@@ -6587,8 +6605,116 @@ CONFIG_PACKAGE_zoneinfo-core=y
 # CONFIG_PACKAGE_colrm is not set
 # CONFIG_PACKAGE_conmon is not set
 # CONFIG_PACKAGE_containerd is not set
-# CONFIG_PACKAGE_coremark is not set
-# CONFIG_PACKAGE_coreutils is not set
+CONFIG_PACKAGE_coremark=y
+CONFIG_COREMARK_OPTIMIZE_O3=y
+CONFIG_COREMARK_ENABLE_MULTITHREADING=y
+CONFIG_COREMARK_NUMBER_OF_THREADS=16
+CONFIG_PACKAGE_coreutils=y
+# CONFIG_PACKAGE_coreutils-b2sum is not set
+# CONFIG_PACKAGE_coreutils-base32 is not set
+CONFIG_PACKAGE_coreutils-base64=y
+# CONFIG_PACKAGE_coreutils-basename is not set
+# CONFIG_PACKAGE_coreutils-basenc is not set
+# CONFIG_PACKAGE_coreutils-cat is not set
+# CONFIG_PACKAGE_coreutils-chcon is not set
+# CONFIG_PACKAGE_coreutils-chgrp is not set
+# CONFIG_PACKAGE_coreutils-chmod is not set
+# CONFIG_PACKAGE_coreutils-chown is not set
+# CONFIG_PACKAGE_coreutils-chroot is not set
+# CONFIG_PACKAGE_coreutils-cksum is not set
+# CONFIG_PACKAGE_coreutils-comm is not set
+# CONFIG_PACKAGE_coreutils-cp is not set
+# CONFIG_PACKAGE_coreutils-csplit is not set
+# CONFIG_PACKAGE_coreutils-cut is not set
+# CONFIG_PACKAGE_coreutils-date is not set
+CONFIG_PACKAGE_coreutils-dd=y
+CONFIG_PACKAGE_coreutils-df=y
+# CONFIG_PACKAGE_coreutils-dir is not set
+# CONFIG_PACKAGE_coreutils-dircolors is not set
+# CONFIG_PACKAGE_coreutils-dirname is not set
+# CONFIG_PACKAGE_coreutils-du is not set
+# CONFIG_PACKAGE_coreutils-echo is not set
+# CONFIG_PACKAGE_coreutils-env is not set
+# CONFIG_PACKAGE_coreutils-expand is not set
+# CONFIG_PACKAGE_coreutils-expr is not set
+# CONFIG_PACKAGE_coreutils-factor is not set
+# CONFIG_PACKAGE_coreutils-false is not set
+# CONFIG_PACKAGE_coreutils-fmt is not set
+# CONFIG_PACKAGE_coreutils-fold is not set
+# CONFIG_PACKAGE_coreutils-groups is not set
+# CONFIG_PACKAGE_coreutils-head is not set
+# CONFIG_PACKAGE_coreutils-hostid is not set
+# CONFIG_PACKAGE_coreutils-id is not set
+# CONFIG_PACKAGE_coreutils-install is not set
+# CONFIG_PACKAGE_coreutils-join is not set
+# CONFIG_PACKAGE_coreutils-kill is not set
+# CONFIG_PACKAGE_coreutils-link is not set
+# CONFIG_PACKAGE_coreutils-ln is not set
+# CONFIG_PACKAGE_coreutils-logname is not set
+# CONFIG_PACKAGE_coreutils-ls is not set
+# CONFIG_PACKAGE_coreutils-md5sum is not set
+# CONFIG_PACKAGE_coreutils-mkdir is not set
+# CONFIG_PACKAGE_coreutils-mkfifo is not set
+# CONFIG_PACKAGE_coreutils-mknod is not set
+# CONFIG_PACKAGE_coreutils-mktemp is not set
+# CONFIG_PACKAGE_coreutils-mv is not set
+# CONFIG_PACKAGE_coreutils-nice is not set
+# CONFIG_PACKAGE_coreutils-nl is not set
+# CONFIG_PACKAGE_coreutils-nohup is not set
+# CONFIG_PACKAGE_coreutils-nproc is not set
+# CONFIG_PACKAGE_coreutils-numfmt is not set
+# CONFIG_PACKAGE_coreutils-od is not set
+# CONFIG_PACKAGE_coreutils-paste is not set
+# CONFIG_PACKAGE_coreutils-pathchk is not set
+# CONFIG_PACKAGE_coreutils-pinky is not set
+# CONFIG_PACKAGE_coreutils-pr is not set
+# CONFIG_PACKAGE_coreutils-printenv is not set
+# CONFIG_PACKAGE_coreutils-printf is not set
+# CONFIG_PACKAGE_coreutils-ptx is not set
+# CONFIG_PACKAGE_coreutils-pwd is not set
+# CONFIG_PACKAGE_coreutils-readlink is not set
+# CONFIG_PACKAGE_coreutils-realpath is not set
+# CONFIG_PACKAGE_coreutils-rm is not set
+# CONFIG_PACKAGE_coreutils-rmdir is not set
+# CONFIG_PACKAGE_coreutils-runcon is not set
+# CONFIG_PACKAGE_coreutils-seq is not set
+# CONFIG_PACKAGE_coreutils-sha1sum is not set
+# CONFIG_PACKAGE_coreutils-sha224sum is not set
+# CONFIG_PACKAGE_coreutils-sha256sum is not set
+# CONFIG_PACKAGE_coreutils-sha384sum is not set
+# CONFIG_PACKAGE_coreutils-sha512sum is not set
+# CONFIG_PACKAGE_coreutils-shred is not set
+# CONFIG_PACKAGE_coreutils-shuf is not set
+# CONFIG_PACKAGE_coreutils-sleep is not set
+# CONFIG_PACKAGE_coreutils-sort is not set
+# CONFIG_PACKAGE_coreutils-split is not set
+# CONFIG_PACKAGE_coreutils-stat is not set
+# CONFIG_PACKAGE_coreutils-stdbuf is not set
+# CONFIG_PACKAGE_coreutils-stty is not set
+# CONFIG_PACKAGE_coreutils-sum is not set
+# CONFIG_PACKAGE_coreutils-sync is not set
+# CONFIG_PACKAGE_coreutils-tac is not set
+# CONFIG_PACKAGE_coreutils-tail is not set
+# CONFIG_PACKAGE_coreutils-tee is not set
+# CONFIG_PACKAGE_coreutils-test is not set
+CONFIG_PACKAGE_coreutils-timeout=y
+CONFIG_PACKAGE_coreutils-touch=y
+CONFIG_PACKAGE_coreutils-tr=y
+# CONFIG_PACKAGE_coreutils-true is not set
+CONFIG_PACKAGE_coreutils-truncate=y
+# CONFIG_PACKAGE_coreutils-tsort is not set
+# CONFIG_PACKAGE_coreutils-tty is not set
+# CONFIG_PACKAGE_coreutils-uname is not set
+# CONFIG_PACKAGE_coreutils-unexpand is not set
+# CONFIG_PACKAGE_coreutils-uniq is not set
+# CONFIG_PACKAGE_coreutils-unlink is not set
+# CONFIG_PACKAGE_coreutils-uptime is not set
+# CONFIG_PACKAGE_coreutils-users is not set
+# CONFIG_PACKAGE_coreutils-vdir is not set
+# CONFIG_PACKAGE_coreutils-wc is not set
+# CONFIG_PACKAGE_coreutils-who is not set
+# CONFIG_PACKAGE_coreutils-whoami is not set
+# CONFIG_PACKAGE_coreutils-yes is not set
 # CONFIG_PACKAGE_cpusage is not set
 # CONFIG_PACKAGE_crconf is not set
 # CONFIG_PACKAGE_crelay is not set
@@ -6627,6 +6753,7 @@ CONFIG_PACKAGE_zoneinfo-core=y
 # CONFIG_PACKAGE_flashrom-pci is not set
 # CONFIG_PACKAGE_flashrom-spi is not set
 # CONFIG_PACKAGE_flashrom-usb is not set
+# CONFIG_PACKAGE_flent-tools is not set
 # CONFIG_PACKAGE_flock is not set
 # CONFIG_PACKAGE_fritz-caldata is not set
 # CONFIG_PACKAGE_fritz-tffs is not set
@@ -6635,7 +6762,7 @@ CONFIG_PACKAGE_zoneinfo-core=y
 # CONFIG_PACKAGE_fuse-overlayfs is not set
 # CONFIG_PACKAGE_fxload is not set
 # CONFIG_PACKAGE_gammu is not set
-# CONFIG_PACKAGE_gawk is not set
+CONFIG_PACKAGE_gawk=y
 # CONFIG_PACKAGE_gddrescue is not set
 # CONFIG_PACKAGE_getopt is not set
 # CONFIG_PACKAGE_giflib-utils is not set
@@ -6659,7 +6786,7 @@ CONFIG_PACKAGE_zoneinfo-core=y
 # CONFIG_PACKAGE_hwinfo is not set
 # CONFIG_PACKAGE_hwloc-utils is not set
 # CONFIG_PACKAGE_i2c-tools is not set
-# CONFIG_PACKAGE_iconv is not set
+CONFIG_PACKAGE_iconv=y
 # CONFIG_PACKAGE_iio-utils is not set
 # CONFIG_PACKAGE_inotifywait is not set
 # CONFIG_PACKAGE_inotifywatch is not set
@@ -6687,10 +6814,10 @@ CONFIG_PACKAGE_lm-sensors=y
 # CONFIG_PACKAGE_look is not set
 CONFIG_PACKAGE_losetup=y
 # CONFIG_PACKAGE_lrzsz is not set
-# CONFIG_PACKAGE_lscpu is not set
+CONFIG_PACKAGE_lscpu=y
 # CONFIG_PACKAGE_lslocks is not set
 # CONFIG_PACKAGE_lsns is not set
-# CONFIG_PACKAGE_lsof is not set
+CONFIG_PACKAGE_lsof=y
 # CONFIG_PACKAGE_lxc is not set
 # CONFIG_PACKAGE_maccalc is not set
 # CONFIG_PACKAGE_macchanger is not set
@@ -6834,8 +6961,14 @@ CONFIG_STRACE_NONE=y
 # CONFIG_PACKAGE_sysrepo is not set
 # CONFIG_PACKAGE_sysrepocfg is not set
 # CONFIG_PACKAGE_sysrepoctl is not set
-# CONFIG_PACKAGE_sysstat is not set
-# CONFIG_PACKAGE_tar is not set
+CONFIG_PACKAGE_sysstat=y
+CONFIG_PACKAGE_tar=y
+CONFIG_PACKAGE_TAR_POSIX_ACL=y
+CONFIG_PACKAGE_TAR_XATTR=y
+CONFIG_PACKAGE_TAR_BZIP2=y
+CONFIG_PACKAGE_TAR_GZIP=y
+CONFIG_PACKAGE_TAR_XZ=y
+CONFIG_PACKAGE_TAR_ZSTD=y
 # CONFIG_PACKAGE_taskset is not set
 # CONFIG_PACKAGE_taskwarrior is not set
 # CONFIG_PACKAGE_telegraf is not set
