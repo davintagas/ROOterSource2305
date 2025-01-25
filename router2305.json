@@ -1,13 +1,15 @@
 {
 	"R1+LTS": {
 		"details": "OrangePI R1 PLUS LTS",
-		"type": "1",
+		"type": "2",
 		"build": "2305",
 		"config": ".config_r1+lts",
-		"image": "openwrt-rockchip-armv8-xunlong_orangepi-r1-plus-lts-squashfs-sysupgrade.img.gz",
+		"image1": "openwrt-rockchip-armv8-xunlong_orangepi-r1-plus-lts-squashfs-sysupgrade.img.gz",
+		"image2": "openwrt-rockchip-armv8-xunlong_orangepi-r1-plus-lts-ext4-sysupgrade.img.gz",
 		"imagepath": "/rockchip/armv8/",
-		"mod": "OrangePI-R1P-LTS",
-		"ext": "-upgrade.img.gz",
+		"mod": "R1_Plus_LTS",
+		"ext1": "-squashfs-upgrade.img.gz",
+		"ext2": "-ext4-upgrade.img.gz",
 		"addons":  ["readme.pdf"]
 	},
 	"BPIR3": {
