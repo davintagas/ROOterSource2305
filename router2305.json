@@ -7,7 +7,7 @@
 		"image": "openwrt-rockchip-armv8-xunlong_orangepi-r1-plus-lts-squashfs-sysupgrade.img.gz",
 		"imagepath": "/rockchip/armv8/",
 		"mod": "R1_Plus_LTS",
-		"ext": "-squashfs-upgrade.img.gz",
+		"ext": "-upgrade.img.gz",
 		"addons":  ["readme.pdf"]
 	},
 	"BPIR3": {
