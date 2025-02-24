@@ -1,0 +1,5 @@
+Demo command "ATI";ATI
+Rebot modem;AT+CFUN=1,1
+Cek Fiksasi;at@nvm: dyn_cps.instance[0].nas_asm.freq_lock_params.*??
+WCDMA & LTE;AT+XACT=4,,,0
+Lock CA B3;at@sic:freq_lock(0,3,255,1,1850,65535)
