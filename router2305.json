@@ -8,7 +8,13 @@
 		"imagepath": "/rockchip/armv8/",
 		"mod": "R1_Plus_LTS",
 		"ext": "-upgrade.img.gz",
-		"addons":  ["readme.pdf"]
+		"addons":  ["readme.pdf"],
+		"custom": {
+			"name": {
+				"model": "R1 PLUS LTS"
+			},
+			"files": "/R1+LTS/files/"
+		}
 	},
 	"BPIR3": {
 		"details": "BananaPi BPi R3",
