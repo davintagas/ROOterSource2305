@@ -511,7 +511,7 @@ buldimage() {
 			fi
 			make defconfig
 			configfix
-			make -j$(nproc) || make -j1 || make -j1 V=s
+			make -j$(nproc) || make -j1 V=s
 			cp ./bin/targets$model_imagepath$model_image ./images/$model_mod$END$model_ext
 			EX=$?
 			if [ $EX -ne 0 ]; then
@@ -531,7 +531,7 @@ buldimage() {
 						sed -i -e 's/# CONFIG_PACKAGE_ext-rooter16 is not set/CONFIG_PACKAGE_ext-rooter16=y/g' ./.config
 						make defconfig
 						configfix
-						make -j$(nproc) || make -j1 || make -j1 V=s
+						make -j$(nproc) || make -j1 V=s
 						cp ./bin/targets$model_imagepath$model_image ./images/$model_mod"-MWAN3"$END$model_ext
 						EX=$?
 						if [ $EX -ne 0 ]; then
